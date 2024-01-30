@@ -1,12 +1,28 @@
-# Title of the project
+# WEATHER Data Management and Monitoring
 
-Write a brief description of the project.
+This project reads, cleans and monitors the data that is being collected in the WEATHER project from MOZAMBIQUE.
 
 ## Info
 
-**Maintainer**: Your name
+* **Network folder**: `airpollution/MOZAMBIQUE/FC_mozambique-weather-data`
+* **Maintainer**: Fabian Coloma
+* **Collaborators**: Ariadna Curto, Jovito Nunes
 
-Team members can access the project at `hpc_airpollution/path/to/project/` (or `airpollution/path/to/project/`). All paths from now on will be relative to this path.
+All paths below are relative to the root of the project folder. As an additional way to work with, you can clone or acces by `https://github.com/isg-airpollution/FC_mozambique-weather-data.git` or [entry on repository](https://github.com/isg-airpollution/FC_mozambique-weather-data)
+
+### Structure
+
+* The raw data is in folder `raw-data/`.
+
+* The [`R/`](R) folder contains the functions needed to read and process the raw data.
+
+* The whole processing pipeline is orchestrated by [`run.R`](run.R).
+
+* The processed data is stored in the `processed-data/` folder.
+
+## Data
+
+The raw data must be manually uploaded to the `raw-data/` folder following the structure specified in the SOPs.
 
 ## Data
 
@@ -27,3 +43,37 @@ The analysis pipeline is orchestrated by [run.R](run.R).
 Specify the output files of the project.
 
 ## How to reproduce
+
+
+``` bash
+.
+├── Manhica
+│   ├── Season 1
+│   │   ├── 999-99999
+│   │   │   ├── EXACT
+│   │   │   ├── FOTOS
+│   │   │   ├── HAPEX
+│   │   │   └── UPAS
+│   ├── Season 2
+│   │   ├── 999-99999
+│   │   │   ├── EXACT
+│   │   │   ├── FOTOS
+│   │   │   ├── HAPEX
+│   │   │   └── UPAS
+└── Xinavane
+    ├── Season 1
+│   │   ├── 999-99999
+│   │   │   ├── EXACT
+│   │   │   ├── FOTOS
+│   │   │   ├── HAPEX
+│   │   │   └── UPAS
+│   ├── Season 2
+│   │   ├── 999-99999
+│   │   │   ├── EXACT
+│   │   │   ├── FOTOS
+│   │   │   ├── HAPEX
+│   │   │   └── UPAS
+
+```
+
+
