@@ -16,9 +16,9 @@ As an additional way to work with, you can clone or access by `https://github.co
 
 > The data is loading by two sources. 
 
-- The initial update is performed manually every 21 days or less.  The description is on [Readme_weatherlink_v2](../documents/) inside of the 1rt BLOCK.
+- The initial update is performed manually every 21 days or less.  The description is on [Readme_weatherlink_v2](../main/documents/) inside of the 1rt BLOCK.
 
-- The second source involves requesting the [API](https://www.weatherlink.com/). This part is explained on [Readme_weatherlink_v2](../documents/) inside of the 2on BLOCK.
+- The second source involves requesting the [API](https://www.weatherlink.com/). This part is explained on [Readme_weatherlink_v2](../main/documents/) inside of the 2on BLOCK.
 
 *It's important to take note that the second step is a back-up to the first step. That implies that if the first one is not working or no one is doing the process, the web will not have new information.*
 
