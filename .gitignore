@@ -1,9 +1,11 @@
 # Data files
 data/
-.csv
-.rds
-.xlsx
-.xls
+
+# data types 
+*.csv
+*.rds
+*.xlsx
+*.xls
 
 # History files
 .Rhistory
@@ -44,3 +46,7 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# bck's
+
+documents/bck/
