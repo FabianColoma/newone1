@@ -50,3 +50,10 @@ vignettes/*.pdf
 # bck's
 
 documents/bck/
+
+# all py code - because the api keys are there 
+
+*.py
+
+# el scratcheo - codigo en sucio que generalmente es confuso
+scratch/

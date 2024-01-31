@@ -1,0 +1,67 @@
+---
+title: "Weather Station Data Analysis"
+author: "Jovito Nunes"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Read file from weatherlink
+
+```{r}
+
+Palmeira_weather_data <- read.delim("/Weatherlink/Palmeira_weather_data.txt")
+
+```
+
+##remove first row
+```{r}
+
+##September##
+Palmeira_weather_data_Jan_2024 <- Palmeira_weather_data_Jan_2024[-c(1),]
+
+out_temp_01jan_31dec_2023 <- Palmeira_weather_data_Jan_2024 %>%
+  dplyr::select(date = X, out_temp = Temp)
+
+out_temp_01jan_31dec_2023$date <- ymd(out_temp_01jan_31dec_2023$date)
+```
+
+
+##add day
+```{r}
+
+##add day
+#out_temp_Sep$day <- day(ymd(out_temp_Sep$date))
+
+
+##remove character so it does give NAs when calculating daily means
+out_temp_01jan_31dec_2023$out_temp[out_temp_01jan_31dec_2023$out_temp == "---"] = NA
+
+##out_temp_09152023 <-out_temp_09152023[!grepl("---", out_temp_09152023$out_temp),]
+##out_temp_10022023 <-out_temp_10022023[!grepl("---", out_temp_10022023$out_temp),]
+
+```
+
+
+##get daily mean of outside temperature
+```{r}
+daily_mean_out_temp_jan_dec_2023 <- out_temp_01jan_31dec_2023 %>%
+  group_by(date) %>%
+  summarise(out_temp_mean = mean(as.numeric(out_temp)))
+
+```
+
+###Plot time series
+```{r}
+ggplot(daily_mean_out_temp_jan_dec_2023) + 
+  aes(x = date, y = out_temp_mean) + 
+  geom_line() +
+  scale_color_manual(values = "steelblue")
+
+```
+
+
+
