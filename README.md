@@ -20,7 +20,7 @@ As an additional way to work with, you can clone or access by `https://github.co
 
 1 - The first load is performed manually. The data must be downloaded on a bi-weekly basis to avoid data being over writter, the data that is stored on the data logger is kept in the data logger fo 21 day, after this the data is overwritten. 
 
-- Using WeatherLink software, data can be downloaded and included in yoyt WeatherLink data files stored in the PC.
+- Using WeatherLink software, data can be downloaded and included in WeatherLink data files stored in the PC.
 - download the data by connecting your laptop to the data logger via USB cable.
 
 2 - The second source involves requesting the [API](https://www.weatherlink.com/). 
